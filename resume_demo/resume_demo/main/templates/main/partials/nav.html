@@ -1,0 +1,40 @@
+{% load static %}
+
+<!-- ================================
+Start Navigation Bar
+================================= -->
+<header>
+      <div class="headerCol" style="background-color:#4D5F78">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <div class="logoCol"><a href="/"><img src="/static/images/icon1.png" alt="..." style="width: 10%;"></a></div>
+            </div>
+            <div class="col">
+              <div class="d-md-none">
+                <button class="navToggle">
+                  <span class="navToggle__text">Toggle Menu</span>
+                </button>
+              </div>
+              <div class="navCollapseCol">
+                <div class="navCol">
+                  <ul>
+<!--                    <li><a href="/">Home</a></li>-->
+<!--                    <li><a href="portfolio.html">Portfolio</a></li>-->
+<!--                    <li><a href="blog.html">Blog</a></li>-->
+<!--                    <li><a href="contact.html">Contact</a></li>-->
+                    <a href="{% url 'main:home' %}">Home</a> |
+                    <a href="{% url 'main:portfolios' %}">Portfolio</a> |
+                    <a href="{% url 'main:blogs' %}">Blog</a> |
+                    <a href="{% url 'main:contact' %}">Contact</a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+<!-- ================================
+End Navigation Bar
+================================= -->

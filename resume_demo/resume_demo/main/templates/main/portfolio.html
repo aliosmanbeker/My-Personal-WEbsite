@@ -1,0 +1,83 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- ================================
+Start SEO blocks
+================================= -->
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+<!-- ================================
+END SEO blocks
+================================= -->
+
+<!-- ================================
+Start CSS blocks
+================================= -->
+{% block extend_header %}{% endblock %}
+<!-- ================================
+END CSS blocks
+================================= -->
+
+<!-- ================================
+Start script blocks
+================================= -->
+{% block extend_footer %}{% endblock %}
+<!-- ================================
+END script blocks
+================================= -->
+
+<!-- ================================
+Start Content
+================================= -->
+{% block content %}
+<section style="background-color: #FFA500;">
+  <div class="innerPageBannerCol">
+    <div class="container">
+      <div class="row g-4 g-md-3  align-items-center">
+        <div class="col-md-6">
+          <div class="bannerContent">
+            <h1 class="xlTitle pb-md-3">See my recent projects below</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="lightBg" style="background-color:white">
+    <div class="container" >
+      <div class="portfolioContentMain" >
+        <div class="row g-3 g-md-4 g-lg-5 portfolioRow" style="background-color: #F0E4C3;">
+          {% for obj in object_list %}
+          <div class="col-12 col-md-6">
+            <div class="portfolio-text text-center" >
+              <a target="_blank" class="title-link" href="{{ obj.link }}"><h5>{{ obj.title }}</h5></a>
+              <p class="project-des">
+              </p>
+            </div>
+            <div class="row">
+              <div class="image">
+               <a href="{% url 'main:portfolio' slug=obj.slug %}" >
+                  <img class="portfolio-img" src="{{ obj.image.url }}">
+                </a>
+              </div>
+            </div>
+            <div class="row button-row">
+              <h1 class="xlTitle pb-md-3">{{ obj.name }}</h1>
+
+              {{ obj.description }}
+
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================================
+End Content
+================================= -->
+{% endblock%}

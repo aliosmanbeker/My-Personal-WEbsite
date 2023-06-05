@@ -1,0 +1,222 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- ================================
+Start SEO blocks
+================================= -->
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+<!-- ================================
+END SEO blocks
+================================= -->
+
+<!-- ================================
+Start CSS blocks
+================================= -->
+{% block extend_header %}{% endblock %}
+<!-- ================================
+END CSS blocks
+================================= -->
+
+<!-- ================================
+Start script blocks
+================================= -->
+{% block extend_footer %}{% endblock %}
+<!-- ================================
+END script blocks
+================================= -->
+
+<!-- ================================
+Start Content
+================================= -->
+{% block content %}
+<section>
+  <div class="bannerSection" >
+    <div class="container">
+      <div class="row g-4 g-md-3  align-items-center">
+        <div class="col-md-auto order-md-last">
+          <div class="bannerUserImg">
+            <img src="{{me.userprofile.avatar.url}}" alt="{{me.first_name|title}} {{me.last_name|title}} avatar">
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="bannerContent">
+            <h1 class="xlTitle pb-3">Hi, I’m {{me.first_name|title}}, <br> a {{me.userprofile.title}} </br></h1>
+            <p>{{me.userprofile.bio}}</p>
+            <div class="bannerBtnCol">
+              <div class="row">
+                <div class="col-auto">
+                  <a download href="{{me.userprofile.cv.url}}" class="btn btnPrimary">Download Resume</a>
+
+                </div>
+                <div class="col-auto">
+                  <a download href="https://github.com/aliosmanbeker" class="btn btnPrimary" style="background-color:#0048A5">Github</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+      <div class="sectionSpaceSm lightBg" style="background-color:#73ADFF">
+        <div class="container">
+          <div class="row pb-3">
+            <div class="col">
+              <h4 class="smText regular">Employment</h4>
+            </div>
+            <div class="col-auto">
+
+            </div>
+          </div>
+          <div class="sliderOuter">
+            <div class="swiper certificatesSlider swiper-initialized swiper-horizontal swiper-pointer-events">
+              <div class="swiper-wrapper" id="swiper-wrapper-7b6123afc1b76324" aria-live="polite" style="background-color:#FFD5FF transition-duration: 0ms; transform: translate3d(-356px, 0px, 0px);">
+                <div class="swiper-slide swiper-slide-prev" role="group" aria-label="1 / 3" style="width: 340px; margin-right: 16px ;">
+                  <div class="cardStyle1">
+                    <h4 class="mdTitle cs1Title">
+                      <a href="javascript:void(0)">R&D Intern</a>
+                    </h4>
+                    <ul class="cardOptionCol">
+                      <li>March 2023 - Jun 2023</li>
+                      <li>AdresGezgini</li>
+                    </ul>
+                    <p>I was on the dataset preparation team for model training in a language recognition project</p>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-active" role="group" aria-label="2 / 3" style="width: 340px; margin-right: 16px;">
+                  <div class="cardStyle1">
+                    <h4 class="mdTitle cs1Title">
+                      <a href="javascript:void(0)">Web Developer</a>
+                    </h4>
+                    <ul class="cardOptionCol">
+                      <li>Nov 202 - Oct 2022</li>
+                      <li>Cezeri Mechatronics</li>
+                    </ul>
+                    <p>I did a project-based web development volunteer internship at a start-up company. I used .Net in the backend, and I designed with HTML and CSS in the frontend.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-next" role="group" aria-label="3 / 3" style="width: 340px; margin-right: 16px;">
+                  <div class="cardStyle1">
+                    <h4 class="mdTitle cs1Title">
+                      <a href="javascript:void(0)">Intern Computer Engineer</a>
+                    </h4>
+                    <ul class="cardOptionCol">
+                      <li>Agust 2021 - Sept 2021</li>
+                      <li>MCBU UBYO</li>
+                    </ul>
+                    <p>Institutional computer technician</p>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-active" role="group" aria-label="2 / 3" style="width: 340px; margin-right: 16px;">
+                  <div class="cardStyle1">
+                    <h4 class="mdTitle cs1Title">
+                      <a href="javascript:void(0)">.Net Developer</a>
+                    </h4>
+                    <ul class="cardOptionCol">
+                      <li>Jun 202 - Agust 2022</li>
+                      <li>MCBU BAUM</li>
+                    </ul>
+                    <p>I worked as a .net developer for 1 month as part of a project approval automation project for the ethics committee.</p>
+                  </div>
+                </div>
+              </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+            <div class="cert-swiper-button-next swiper-button-next swiperBtnStyle swiper-button-disabled" tabindex="-1" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-7b6123afc1b76324" aria-disabled="true"></div>
+            <div class="cert-swiper-button-prev swiper-button-prev swiperBtnStyle" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-7b6123afc1b76324" aria-disabled="false"></div>
+            <div class="swiper-pagination swiperPaginationStyle posInitial swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 2"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section >
+  <div class="sectionSpace" style="background-color:#DFEDFF">
+    <div class="container" style="background-color:#97B6E2">
+      <div class="portfolioCol">
+        <div class="row pb-3" >
+          <div class="col" >
+            <h4 class="smText regular" >Featured Work</h4>
+          </div>
+          <div class="col-auto">
+            <a href="{% url 'main:portfolios' %}" class="simpleLink" >View all</a>
+          </div>
+        </div>
+        {% for p in portfolio %}
+        {% if p.is_active %}
+        <div class="portfolioCard">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-auto">
+              <div class="portfolioImgCol">
+                <a href="{% url 'main:portfolio' slug=p.slug %}"><img src="{{ p.image.url }}" alt="..."></a>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="portfolioContentCol">
+
+                <h4 class="lgTitle"><a href="{% url 'main:portfolio' slug=p.slug %}">{{p.name}}</a></h4>
+                <ul class="portfolioOption">
+                  <li><span class="dateLbl">{{p.date.year}}</span></li>
+                </ul>
+                <p>{{p.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+      </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sectionSpaceSm lightBg" style="background-color:#5A8ED6">
+    <div class="container">
+      <div class="row pb-3">
+        <div class="col">
+          <h4 class="smText regular">Certificates</h4>
+        </div>
+
+      </div>
+      <div class="sliderOuter">
+        <div class="swiper certificatesSlider">
+          <div class="swiper-wrapper">
+            {% for c in certificates %}
+            {% if c.is_active %}
+            <div class="swiper-slide">
+              <div class="cardStyle1">
+                <h4 class="mdTitle cs1Title">
+                  <a href="javascript:void(0)">{{c.title}}</a>
+                </h4>
+                <ul class="cardOptionCol">
+                  <li>{{c.date.date}}</li>
+                  <li>{{c.name|title}}</li>
+                </ul>
+                <p>{{c.description}}</p>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+          </div>
+        </div>
+        <div class="cert-swiper-button-next swiper-button-next swiperBtnStyle"></div>
+        <div class="cert-swiper-button-prev swiper-button-prev swiperBtnStyle"></div>
+        <div class="swiper-pagination swiperPaginationStyle posInitial"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+<!-- ================================
+End Content
+================================= -->
